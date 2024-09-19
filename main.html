@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="main-body" style="background-image: url(img1.jpg);">
+  <header>
+    <img src="cmr.jpeg" alt="logo" class="logo">
+    <h1>CMR COLLEGE OF ENGINEERING & TECHNOLOGY</h1>
+    <h2>Offline Drives</h2>
+    <nav>
+      <ul>
+        <li class="hover-container">
+          <a href="#" class="nav-link" onclick="loadJobs('internships')">Internships</a>
+          <div class="hover-content">
+            <button class="btn" onclick="loadFilteredJobs('internships', 'Remote')">Remote</button>
+            <button class="btn" onclick="loadFilteredJobs('internships', 'On-Site')">On-Site</button>
+            <button class="btn" onclick="loadFilteredJobs('internships', 'Hybrid')">Hybrid</button>
+          </div>
+        </li>
+        <li class="hover-container">
+          <a href="#" class="nav-link" onclick="loadJobs('fulltime')">Full-Time</a>
+          <div class="hover-content">
+            <button class="btn" onclick="loadFilteredJobs('fulltime', 'Remote')">Remote</button>
+            <button class="btn" onclick="loadFilteredJobs('fulltime', 'On-Site')">On-Site</button>
+            <button class="btn" onclick="loadFilteredJobs('fulltime', 'Hybrid')">Hybrid</button>
+          </div>
+        </li>
+        <li class="hover-container">
+          <a href="#" class="nav-link" onclick="loadJobs('parttime')">Part-Time</a>
+          <div class="hover-content">
+            <button class="btn" onclick="loadFilteredJobs('parttime', 'Remote')">Remote</button>
+            <button class="btn" onclick="loadFilteredJobs('parttime', 'On-Site')">On-Site</button>
+            <button class="btn" onclick="loadFilteredJobs('parttime', 'Hybrid')">Hybrid</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div id="search-filter">
+    <h1 id="label">Find Your Dream Job Here</h1>
+  </div>
+  
+  <div id="job-container" class="job-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

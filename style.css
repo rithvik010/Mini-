@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main-body {
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: rgb(99, 106, 182);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  height: 80px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  object-fit: contain;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+h2 {
+  margin: 5px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Search and Filter Container */
+#search-filter {
+  text-align: center;
+  margin-top: 160px;
+}
+
+#label {
+  margin-bottom: 30px;
+  color: hsl(143, 100%, 50%);
+}
+
+.Search {
+  padding: 15px;
+  width: 70%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.filter {
+  width: 100px;
+  padding: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: hsl(226, 60%, 64%);
+  border-radius: 6px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.filter:hover {
+  background-color: hsl(226, 60%, 55%);
+}
+
+/* Job Container */
+.job-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Job Cards */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Adjusted for responsiveness */
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.apply-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo {
+      height: 60px;
+      left: 10px;
+      top: 10px;
+  }
+
+  header {
+      padding: 15px;
+  }
+
+  h1, h2 {
+      font-size: 1.5em;
+  }
+
+  nav ul li {
+      display: block;
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .search-filter {
+      margin-top: 100px;
+  }
+
+  .Search {
+      width: 90%;
+  }
+
+  .job-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 90%; /* Adjusted for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .Search, .filter {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .apply-button {
+      width: 100%;
+      text-align: center;
+  }
+}
+/* Hover Effect Styles */
+.hover-container {
+  position: relative;
+  display: inline-block;
+  /* background-size: cover; */
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  border-radius: 12px;
+  /* background-size: cover; */
+}
+
+.hover-container:hover .hover-content {
+  display: block;
+  /* background-size: cover; */
+}
+
+.btn {
+  padding: 6px;
+  margin: 2px;
+  width: 100px;
+  border-radius: 8px;
+  background-color: hsl(230, 76%, 67%);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* background-size: cover; */
+}
